@@ -1,0 +1,61 @@
+import java.util.Scanner;
+class StudentGrade
+{
+    public void StudentInfo()
+    {
+        Scanner sc = new Scanner(System.in);
+        String name;
+        int RollNo;
+        int P,C,M,B,Total,avg;
+        System.out.println("Enter the Name and Roll Number of the Student");
+        name=sc.nextLine();
+        RollNo=sc.nextInt();
+        System.out.println("Enter the Marks of PHYSICS,CHEMISTRY,MATHEMATICS AND BIOLOGY");
+        P=sc.nextInt();
+        C=sc.nextInt();
+        M=sc.nextInt();
+        B=sc.nextInt();
+       
+        Total=P+C+M+B;
+       avg=Total/4;
+       System.out.println("******************************************** STUDENT GRADING SYSTEM *******************************************");
+       System.out.println("THE NAME OF THE STUDENT IS :- "+name);
+       System.out.println("THE ROLL NUMBER OF THE STUDENT IS :- "+RollNo);
+
+       System.out.println("\nTHR MARKS OF PHYSICS :- "+P+"\nTHE MARKS OF CHEMISTRY :-"+C+"\nTHE MARKS OF MATHEMATICS  :- "+M+"\nTHE MARKS OF THE BIOLOGY :- "+M);
+       System.out.println("TOTAL MARKS OF THE STUDENT :- "+Total);
+       System.out.println("AVERAGE MARKS OF TYHE STUDENT :- "+avg);
+       if(avg>90)
+       {
+        System.out.println("THE GRADE OF THE STUDENT IS :- A");
+       }
+       else if(avg>80)
+       {
+        System.out.println("THE GRADE OF THE STUDENT IS :- B");
+       }
+       else if(avg>70)
+       {
+        System.out.println("THE GRADE OF TTHE STUDENT IS :-  C");
+       }
+       else if(avg>60)
+       {
+        System.out.println("THE GRADE OF THE STUDEENT IS :- D");
+       }
+       else if(avg>50)
+       {
+        System.out.println("THE GRADE OF THE STUDENT IS :- E");
+       }
+       else if(avg>40)
+       {
+        System.out.println("THE GRADDE OF THE STUDENT IS :- F");
+       }
+       else{
+        System.out.println("YOU ARE FAIL PLEASE GIVE NEXT TRIAL");
+       }
+    }
+    public static void main(String[] args)
+    {
+        StudentGrade s=new StudentGrade();
+        s.StudentInfo();
+    }
+}
